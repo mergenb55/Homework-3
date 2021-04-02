@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct student1 {                       //struct형 구조체 선언
+    char lastName;
+    int studentId;
+    char grade;
+};
+
+typedef struct {                        //typedef형 구조체 선언
+    char lastName;
+    int studentId;
+    char grade;
+}student2;
+
+int main()
+{
+    printf("[----- [Bayarbat Mergen] [2020039087] -----]\n");
+    struct student1 st1 = { 'A', 100, 'A' };            //구조체 초기화
+
+    printf("st1.lastNamae = %c\n", st1.lastName);
+    printf("st1.studentId = %d\n", st1.studentId);
+    printf("st1.grade = %c\n", st1.grade);
+
+    student2 st2 = { 'B', 200, 'B' };                 //구조체 초기화
+
+    printf("st2.lastNamae = %c\n", st2.lastName);
+    printf("st2.studentId = %d\n", st2.studentId);
+    printf("st2.grade = %c\n", st2.grade);
+
+    student2 st3;                                 //새로운 구조체 선언
+    st3 = st2;                                      //구조체에 초기화한 값을 새로 선언 값에 넣는다
+
+    printf("st3.lastNamae = %c\n", st3.lastName);
+    printf("st3.studentId = %d\n", st3.studentId);
+    printf("st3.grade = %c\n", st3.grade);
+
+    /*equality test*/
+
+    /*if(st3 == st2)
+        printf("equal\n");
+    else
+        printf("not equal\n");*/
+
+
+    return 0;                                //리턴
+}
+

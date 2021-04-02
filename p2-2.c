@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    printf("[----- [Bayarbat Mergen] [2020039087] -----]\n");
+    int one[] = { 0, 1, 2, 3, 4 };        //배열 선언 및 초기화
+    printf("one = %p\n", one);          //변수의 포인터 값 출력
+    printf("&one = %p\n", &one);        //변수의 포인터의 주소 출력
+    printf("&one[0] = %p\n", &one[0]);  //배열의 포인터의 주소 출력
+
+    print1(&one[0], 5);                 //함수를 부른다
+    return 0;                           //리턴
+}
+
+void print1(int* ptr, int rows)        //함수
+{
+    int i;                                  //변수 선언
+    printf("Address Contents\n");
+    for (i = 0; i < rows; i++)              //for loop
+        printf("%p\t %5d\n", ptr + i, *(ptr + i));        //포인터 변수의 주소와 배열의 값 출력
+    printf("\n");
+}
